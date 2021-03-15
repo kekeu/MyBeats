@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_8_dp">8dp</dimen>
+    <dimen name="small_26_dp">26dp</dimen>
+    <dimen name="small_24_dp">24dp</dimen>
+    <dimen name="medium_63_dp">63dp</dimen>
+    <dimen name="medium_60_dp">60dp</dimen>
+    <dimen name="medium_62_dp">62dp</dimen>
+    <dimen name="medium_51_dp">51dp</dimen>
+    <dimen name="medium_49_dp">49dp</dimen>
+    <dimen name="large_74_dp">74dp</dimen>
+    <dimen name="extra_large_299_dp">299dp</dimen>
+</resources>
