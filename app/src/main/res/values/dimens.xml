@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="small_8_dp">8dp</dimen>
+    <dimen name="small_7_dp">7dp</dimen>
+    <dimen name="small_9_dp">9dp</dimen>
+    <dimen name="small_10_dp">10dp</dimen>
+    <dimen name="small_16_dp">16dp</dimen>
     <dimen name="small_26_dp">26dp</dimen>
     <dimen name="small_24_dp">24dp</dimen>
+    <dimen name="small_22_dp">22dp</dimen>
+    <dimen name="small_32_dp">32dp</dimen>
+    <dimen name="small_11_dp">11dp</dimen>
+    <dimen name="small_45_dp">45dp</dimen>
+    <dimen name="small_44_dp">44dp</dimen>
+    <dimen name="small_37_dp">37dp</dimen>
+
     <dimen name="medium_63_dp">63dp</dimen>
     <dimen name="medium_60_dp">60dp</dimen>
     <dimen name="medium_62_dp">62dp</dimen>
+    <dimen name="medium_55_dp">55dp</dimen>
     <dimen name="medium_51_dp">51dp</dimen>
     <dimen name="medium_49_dp">49dp</dimen>
+
     <dimen name="large_74_dp">74dp</dimen>
+    <dimen name="large_163_dp">163dp</dimen>
+    <dimen name="large_102_dp">102dp</dimen>
+    <dimen name="large_110_dp">110dp</dimen>
+
+
     <dimen name="extra_large_299_dp">299dp</dimen>
+    <dimen name="extra_large_219_dp">219dp</dimen>
+    <dimen name="extra_large_266_dp">266dp</dimen>
 </resources>
