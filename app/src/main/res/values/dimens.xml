@@ -7,6 +7,7 @@
     <dimen name="small_4_33_dp">4.33dp</dimen>
     <dimen name="small_8_dp">8dp</dimen>
     <dimen name="small_7_dp">7dp</dimen>
+    <dimen name="small_2_dp">2dp</dimen>
     <dimen name="small_9_dp">9dp</dimen>
     <dimen name="small_10_dp">10dp</dimen>
     <dimen name="small_16_dp">16dp</dimen>
@@ -20,6 +21,7 @@
     <dimen name="small_32_dp">32dp</dimen>
     <dimen name="small_34_dp">34dp</dimen>
     <dimen name="small_11_dp">11dp</dimen>
+    <dimen name="small_12_dp">12dp</dimen>
     <dimen name="small_45_dp">45dp</dimen>
     <dimen name="small_44_dp">44dp</dimen>
     <dimen name="small_37_dp">37dp</dimen>
@@ -39,8 +41,12 @@
 
 
     <dimen name="extra_large_299_dp">299dp</dimen>
+    <dimen name="extra_large_209_dp">209dp</dimen>
+    <dimen name="extra_large_248_dp">248dp</dimen>
     <dimen name="extra_large_219_dp">219dp</dimen>
     <dimen name="extra_large_266_dp">266dp</dimen>
     <dimen name="extra_large_307_dp">307dp</dimen>
     <dimen name="extra_large_253_dp">253dp</dimen>
+    <dimen name="extra_large_249_dp">249dp</dimen>
+    <dimen name="extra_large_232_dp">232dp</dimen>
 </resources>

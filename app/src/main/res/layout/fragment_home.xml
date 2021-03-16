@@ -18,18 +18,31 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:id="@+id/imageView2"
             android:layout_width="@dimen/extra_large_266_dp"
             android:layout_height="@dimen/extra_large_219_dp"
             android:layout_marginStart="@dimen/medium_55_dp"
             android:layout_marginTop="@dimen/medium_62_dp"
             android:layout_marginEnd="@dimen/medium_55_dp"
             android:layout_marginBottom="@dimen/small_24_dp"
-            android:src="@drawable/headphone"
             android:scaleType="centerCrop"
+            android:src="@drawable/headphone"
             app:layout_constraintBottom_toTopOf="@+id/buttonAdicionar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="@dimen/extra_large_232_dp"
+            android:layout_height="@dimen/small_8_dp"
+            android:layout_marginStart="@dimen/small_18_dp"
+            android:layout_marginEnd="@dimen/small_16_dp"
+            android:layout_marginTop="@dimen/extra_large_209_dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ellipse"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
         <Button
             android:id="@+id/buttonAdicionar"
