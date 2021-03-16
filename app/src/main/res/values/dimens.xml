@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="small_13_33_dp">13.33dp</dimen>
+    <dimen name="small_12_68_dp">12.68dp</dimen>
+    <dimen name="small_38_33_dp">38.33dp</dimen>
+    <dimen name="small_10_33_dp">10.33dp</dimen>
+    <dimen name="small_4_33_dp">4.33dp</dimen>
     <dimen name="small_8_dp">8dp</dimen>
     <dimen name="small_7_dp">7dp</dimen>
     <dimen name="small_9_dp">9dp</dimen>
@@ -36,4 +41,6 @@
     <dimen name="extra_large_299_dp">299dp</dimen>
     <dimen name="extra_large_219_dp">219dp</dimen>
     <dimen name="extra_large_266_dp">266dp</dimen>
+    <dimen name="extra_large_307_dp">307dp</dimen>
+    <dimen name="extra_large_253_dp">253dp</dimen>
 </resources>
