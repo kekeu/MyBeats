@@ -27,6 +27,7 @@
             android:layout_marginBottom="@dimen/small_24_dp"
             android:scaleType="centerCrop"
             android:src="@drawable/headphone"
+            android:contentDescription="@string/app_name"
             app:layout_constraintBottom_toTopOf="@+id/buttonAdicionar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,39 +41,32 @@
             android:layout_marginTop="@dimen/extra_large_209_dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ellipse"
+            android:contentDescription="@string/app_name"
             app:layout_constraintEnd_toEndOf="@+id/imageView2"
             app:layout_constraintStart_toStartOf="@+id/imageView2"
             app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
         <Button
+            style="@style/ButtonPrimary"
             android:id="@+id/buttonAdicionar"
             android:layout_width="@dimen/large_163_dp"
             android:layout_height="@dimen/small_45_dp"
             android:layout_marginStart="@dimen/large_102_dp"
             android:layout_marginEnd="@dimen/large_110_dp"
             android:layout_marginBottom="@dimen/small_32_dp"
-            android:background="@drawable/button_shape"
             android:text="@string/adicionar"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:letterSpacing="0.01"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
+            style="@style/ButtonPrimary"
             android:id="@+id/buttonPergunta"
             android:layout_width="@dimen/small_44_dp"
             android:layout_height="@dimen/small_45_dp"
             android:layout_marginStart="@dimen/small_11_dp"
             android:layout_marginBottom="@dimen/small_32_dp"
-            android:background="@drawable/button_shape"
             android:text="@string/pergunta"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:letterSpacing="0.01"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/buttonAdicionar" />
 

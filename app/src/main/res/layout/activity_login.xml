@@ -8,18 +8,19 @@
     tools:context=".ui.login.LoginActivity">
 
     <ImageView
-        android:id="@+id/viewImage"
+        android:id="@+id/loginImageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/background"
+        android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/viewGradient"
+        android:id="@+id/loginViewGradient"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/gradient_background_login"
@@ -29,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewMeuBeats"
+        android:id="@+id/loginTextViewMyBeats"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="@dimen/large_74_dp"
@@ -47,7 +48,6 @@
         android:id="@+id/textViewEspecializa"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_below="@+id/textViewMeuBeats"
         android:layout_marginStart="@dimen/medium_60_dp"
         android:layout_marginTop="@dimen/small_8_dp"
         android:layout_marginEnd="@dimen/medium_60_dp"
@@ -58,7 +58,7 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMeuBeats" />
+        app:layout_constraintTop_toBottomOf="@+id/loginTextViewMyBeats" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputLayoutUsuario"
@@ -131,7 +131,7 @@
         android:layout_marginStart="@dimen/medium_62_dp"
         android:layout_marginEnd="@dimen/medium_62_dp"
         android:layout_marginBottom="@dimen/medium_63_dp"
-        app:layout_constraintBottom_toBottomOf="@+id/viewImage"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
