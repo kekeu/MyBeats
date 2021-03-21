@@ -17,7 +17,8 @@
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.dev.clevertonsantos.mybeats.ui.details.DetailsFragment"
-        android:label="">
+        android:label=""
+        tools:layout="@layout/fragment_details">
 
         <argument
             android:name="image"
