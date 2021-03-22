@@ -10,8 +10,8 @@ class LoginViewModel(private val dataSource: HeadphoneRepository) : ViewModel() 
 
     val loginLiveData: MutableLiveData<Pair<Boolean, String?>> = MutableLiveData()
 
-    fun login(email: String, senha: String) {
-        dataSource.login(email, senha) { result ->
+    fun login(email: String, password: String) {
+        dataSource.login(email, password) { result ->
             when (result) {
                 is HeadphoneResult.Success -> loginLiveData.value = Pair(true, null)
                 is HeadphoneResult.ApiError -> loginLiveData.value = Pair(false, result.messageError)

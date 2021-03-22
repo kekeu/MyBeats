@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.dev.clevertonsantos.mybeats.R
 import com.dev.clevertonsantos.mybeats.data.model.Headphone
 import com.dev.clevertonsantos.mybeats.extensions.load
+import kotlinx.android.synthetic.main.item.view.*
 import java.text.DecimalFormat
 
 class HomeAdapter(
@@ -39,19 +40,13 @@ class HomeAdapter(
         private val onItemClickerListener: ((headphone: Headphone) -> Unit)
     ) : RecyclerView.ViewHolder(itemView) {
 
-        private val itemDescription = itemView.findViewById<TextView>(R.id.itemDescription)
-        private val itemNote = itemView.findViewById<TextView>(R.id.itemNote)
-        private val itemReviews = itemView.findViewById<TextView>(R.id.itemReviews)
-        private val itemValue = itemView.findViewById<TextView>(R.id.itemValue)
-        private val imageView = itemView.findViewById<ImageView>(R.id.itemImagem)
-
         fun bindView(headphone: Headphone) {
-            itemDescription.text = headphone.name
-            itemNote.text = headphone.rating.toString()
-            itemReviews.text = "${headphone.total_reviews} Reviews"
+            itemView.itemDescription.text = headphone.name
+            itemView.itemNote.text = headphone.rating.toString()
+            itemView.itemReviews.text = "${headphone.total_reviews} Reviews"
             val dec = DecimalFormat("#,###.00")
-            itemValue.text = "R$ ${dec.format(headphone.value)}"
-            imageView.load(headphone.image)
+            itemView.itemValue.text = "R$ ${dec.format(headphone.value)}"
+            itemView.itemImageView.load(headphone.image)
 
             itemView.setOnClickListener {
                 onItemClickerListener.invoke(headphone)

@@ -18,4 +18,8 @@
     <string name="descricao">Descrição</string>
     <string name="comprar">Comprar</string>
     <string name="search">Search</string>
+    <string name="phone_model_02">Fone modelo 02</string>
+    <string name="note_4_8">4.8</string>
+    <string name="reviews_86">86 reviews</string>
+    <string name="value_20_50">R$ 20,50</string>
 </resources>

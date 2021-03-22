@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import android.widget.ViewFlipper
 import androidx.fragment.app.Fragment
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.dev.clevertonsantos.mybeats.R
 import com.dev.clevertonsantos.mybeats.data.model.Headphone
 import com.dev.clevertonsantos.mybeats.data.repository.HeadphoneApiDataSource
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
 
@@ -30,17 +32,16 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val flipper = view.findViewById<ViewFlipper>(R.id.viewFlipper)
-        val textViewError = view.findViewById<TextView>(R.id.error)
-        val recyclerBooks = view.findViewById<RecyclerView>(R.id.recyclerHeadphones)
-
-        with(recyclerBooks) {
+        with(homeRecyclerHeadphones) {
             layoutManager = LinearLayoutManager(activity,
                     RecyclerView.VERTICAL,false)
             setHasFixedSize(true)
             adapter = homeAdapter
         }
 
+        homeButtonAdd.setOnClickListener {
+            viewModel.getHeadphones()
+        }
         viewModel.headphonesLiveData.observe(viewLifecycleOwner, {
             it?.let { headphones ->
                 homeAdapter.addItens(headphones)
@@ -48,9 +49,9 @@ class HomeFragment : Fragment() {
         })
         viewModel.viewFlipperLiveData.observe(viewLifecycleOwner, {
             it?.let { viewFlipper ->
-                flipper.displayedChild = viewFlipper.first
+                homeViewFlipper.displayedChild = viewFlipper.first
                 viewFlipper.second?.let { errorMessage ->
-                    textViewError.text = errorMessage
+                    homeTextViewError.text = errorMessage
                 }
             }
         })

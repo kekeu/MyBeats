@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_13_33_dp">13.33dp</dimen>
+    <dimen name="small_12_68_dp">12.68dp</dimen>
+    <dimen name="small_38_33_dp">38.33dp</dimen>
+    <dimen name="small_10_33_dp">10.33dp</dimen>
+    <dimen name="small_4_33_dp">4.33dp</dimen>
+    <dimen name="small_8_dp">8dp</dimen>
+    <dimen name="small_7_dp">7dp</dimen>
+    <dimen name="small_2_dp">2dp</dimen>
+    <dimen name="small_9_dp">9dp</dimen>
+    <dimen name="small_10_dp">10dp</dimen>
+    <dimen name="small_16_dp">16dp</dimen>
+    <dimen name="small_18_dp">18dp</dimen>
+    <dimen name="small_26_dp">26dp</dimen>
+    <dimen name="small_27_dp">27dp</dimen>
+    <dimen name="small_24_dp">24dp</dimen>
+    <dimen name="small_23_dp">23dp</dimen>
+    <dimen name="small_25_dp">25dp</dimen>
+    <dimen name="small_22_dp">22dp</dimen>
+    <dimen name="small_32_dp">32dp</dimen>
+    <dimen name="small_34_dp">34dp</dimen>
+    <dimen name="small_11_dp">11dp</dimen>
+    <dimen name="small_12_dp">12dp</dimen>
+    <dimen name="small_45_dp">45dp</dimen>
+    <dimen name="small_44_dp">44dp</dimen>
+    <dimen name="small_37_dp">37dp</dimen>
+
+    <dimen name="medium_63_dp">63dp</dimen>
+    <dimen name="medium_60_dp">60dp</dimen>
+    <dimen name="medium_62_dp">62dp</dimen>
+    <dimen name="medium_55_dp">55dp</dimen>
+    <dimen name="medium_51_dp">51dp</dimen>
+    <dimen name="medium_49_dp">49dp</dimen>
+
+    <dimen name="large_74_dp">74dp</dimen>
+    <dimen name="large_77_dp">77dp</dimen>
+    <dimen name="large_163_dp">163dp</dimen>
+    <dimen name="large_102_dp">102dp</dimen>
+    <dimen name="large_110_dp">110dp</dimen>
+
+
+    <dimen name="extra_large_299_dp">299dp</dimen>
+    <dimen name="extra_large_209_dp">209dp</dimen>
+    <dimen name="extra_large_248_dp">248dp</dimen>
+    <dimen name="extra_large_219_dp">219dp</dimen>
+    <dimen name="extra_large_266_dp">266dp</dimen>
+    <dimen name="extra_large_307_dp">307dp</dimen>
+    <dimen name="extra_large_253_dp">253dp</dimen>
+    <dimen name="extra_large_249_dp">249dp</dimen>
+    <dimen name="extra_large_232_dp">232dp</dimen>
+</resources>
