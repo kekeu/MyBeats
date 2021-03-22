@@ -1,12 +1,12 @@
-package com.dev.clevertonsantos.mybeats.data.response
+package com.dev.clevertonsantos.mybeats.data.request
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-data class UserResponse(
+data class UserRequest(
     @Json(name = "email")
     val email: String,
     @Json(name = "password")
-    val senha: String
+    val password: String
 )

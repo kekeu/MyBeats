@@ -8,11 +8,11 @@
     tools:context=".ui.home.HomeFragment">
 
     <View
-        android:id="@+id/gradient"
+        android:id="@+id/detailsGradient"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/gradient_background"
-        app:layout_constraintBottom_toBottomOf="@+id/guideline"
+        app:layout_constraintBottom_toBottomOf="@+id/detailsGuideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,7 +27,7 @@
         android:layout_marginStart="@dimen/small_34_dp"
         android:layout_marginEnd="@dimen/small_34_dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintBottom_toTopOf="@id/detailsGuideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -46,7 +46,7 @@
         app:layout_constraintTop_toTopOf="@+id/detailsImage" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
+        android:id="@+id/detailsGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -54,17 +54,17 @@
         app:layout_constraintGuide_percent="0.45" />
 
     <View
-        android:id="@+id/constraintLayout"
+        android:id="@+id/detailsViewBackground"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+        app:layout_constraintTop_toTopOf="@+id/detailsGuideline" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
+        android:id="@+id/detailsGuideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -72,7 +72,7 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <View
-        android:id="@+id/detailsView"
+        android:id="@+id/detailsViewLine"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginStart="@dimen/small_27_dp"
@@ -90,8 +90,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/small_32_dp"
         android:text="@string/conexao"
-        app:layout_constraintEnd_toEndOf="@id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/detailsView" />
+        app:layout_constraintEnd_toEndOf="@id/detailsGuideline2"
+        app:layout_constraintTop_toTopOf="@+id/detailsViewLine" />
 
     <TextView
         style="@style/TextViewDetails"
@@ -100,8 +100,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/small_32_dp"
         android:text="@string/conexao"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/detailsView" />
+        app:layout_constraintStart_toStartOf="@+id/detailsGuideline2"
+        app:layout_constraintTop_toTopOf="@+id/detailsViewLine" />
 
     <TextView
         style="@style/TextViewDetailsBold"
@@ -109,7 +109,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/compatibilidade"
-        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="@id/detailsGuideline2"
         app:layout_constraintTop_toBottomOf="@+id/detailsConection" />
 
     <TextView
@@ -118,7 +118,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/compatibilidade"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/detailsGuideline2"
         app:layout_constraintTop_toBottomOf="@+id/detailsConectionValue" />
 
     <TextView
@@ -127,7 +127,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/alimentacao"
-        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="@id/detailsGuideline2"
         app:layout_constraintTop_toBottomOf="@+id/detailsCompatibility" />
 
     <TextView
@@ -136,7 +136,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/alimentacao"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/detailsGuideline2"
         app:layout_constraintTop_toBottomOf="@+id/detailsCompatibilityValue" />
 
     <TextView
@@ -145,7 +145,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/autonomia"
-        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="@id/detailsGuideline2"
         app:layout_constraintTop_toBottomOf="@+id/detailsCharge" />
 
     <TextView
@@ -154,7 +154,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/autonomia"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/detailsGuideline2"
         app:layout_constraintTop_toBottomOf="@+id/detailsChargeValue" />
 
     <TextView
@@ -163,7 +163,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/altura"
-        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="@id/detailsGuideline2"
         app:layout_constraintTop_toBottomOf="@+id/detailsAutonomy" />
 
     <TextView
@@ -172,7 +172,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/altura"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/detailsGuideline2"
         app:layout_constraintTop_toBottomOf="@+id/detailsAutonomyValue" />
 
     <TextView
@@ -181,7 +181,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/captacao"
-        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="@id/detailsGuideline2"
         app:layout_constraintTop_toBottomOf="@+id/detailsHeight" />
 
     <TextView
@@ -190,12 +190,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/captacao"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/detailsGuideline2"
         app:layout_constraintTop_toBottomOf="@+id/detailsHeightValue" />
 
     <Button
         style="@style/ButtonPrimary"
-        android:id="@+id/buttonEntrar"
+        android:id="@+id/detailsButtonEnter"
         android:layout_width="326dp"
         android:layout_height="50dp"
         android:text="@string/comprar"
@@ -204,7 +204,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/detailsName"
+        android:id="@+id/detailsDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/small_32_dp"
@@ -213,7 +213,7 @@
         android:text="@string/descricao"
         android:textColor="@color/white"
         android:textSize="45sp"
-        app:layout_constraintBottom_toTopOf="@+id/detailsView"
+        app:layout_constraintBottom_toTopOf="@+id/detailsViewLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.dev.clevertonsantos.mybeats.R
 import com.dev.clevertonsantos.mybeats.extensions.load
+import kotlinx.android.synthetic.main.fragment_details.*
 
 class DetailsFragment : Fragment() {
 
@@ -25,23 +26,14 @@ class DetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val textName = view.findViewById<TextView>(R.id.detailsName)
-        val textConnection = view.findViewById<TextView>(R.id.detailsConectionValue)
-        val textCompatibility = view.findViewById<TextView>(R.id.detailsCompatibilityValue)
-        val textCharge = view.findViewById<TextView>(R.id.detailsChargeValue)
-        val textAutonomy = view.findViewById<TextView>(R.id.detailsAutonomyValue)
-        val textHeight = view.findViewById<TextView>(R.id.detailsHeightValue)
-        val textCapture = view.findViewById<TextView>(R.id.detailsCaptureValue)
-        val imageView = view.findViewById<ImageView>(R.id.detailsImage)
-
-        imageView.load(args.image)
-        textName.text = args.name
-        textConnection.text = args.connection
-        textCompatibility.text = args.compatibility
-        textCharge.text = args.charge
-        textAutonomy.text = args.autonomy
-        textHeight.text = args.height
-        textCapture.text = args.capture
+        detailsImage.load(args.image)
+        detailsDescription.text = args.name
+        detailsConectionValue.text = args.connection
+        detailsCompatibilityValue.text = args.compatibility
+        detailsChargeValue.text = args.charge
+        detailsAutonomyValue.text = args.autonomy
+        detailsHeightValue.text = args.height
+        detailsCaptureValue.text = args.capture
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

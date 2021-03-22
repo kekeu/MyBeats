@@ -45,7 +45,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewEspecializa"
+        android:id="@+id/loginTextViewSpecializes"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="@dimen/medium_60_dp"
@@ -61,7 +61,7 @@
         app:layout_constraintTop_toBottomOf="@+id/loginTextViewMyBeats" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputLayoutUsuario"
+        android:id="@+id/loginInputLayoutUser"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -69,12 +69,12 @@
         android:layout_marginEnd="@dimen/small_26_dp"
         android:layout_marginBottom="@dimen/medium_51_dp"
         android:textColorHint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/inputTextSenha"
+        app:layout_constraintBottom_toTopOf="@+id/loginInputTextPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextUsuario"
+            android:id="@+id/loginEditTextUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/usuario"
@@ -84,7 +84,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputTextSenha"
+        android:id="@+id/loginInputTextPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -92,12 +92,12 @@
         android:layout_marginEnd="@dimen/small_24_dp"
         android:layout_marginBottom="@dimen/medium_49_dp"
         android:textColorHint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/buttonEntrar"
+        app:layout_constraintBottom_toTopOf="@+id/loginButtonEnter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextSenha"
+            android:id="@+id/loginEditTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/ic_eyes"
@@ -108,7 +108,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/buttonEntrar"
+        android:id="@+id/loginButtonEnter"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="@dimen/small_24_dp"
@@ -120,12 +120,12 @@
         android:letterSpacing="0.01"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/frameLayuot"
+        app:layout_constraintBottom_toTopOf="@+id/loginLayoutRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/frameLayuot"
+        android:id="@+id/loginLayoutRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/medium_62_dp"
@@ -136,7 +136,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:id="@+id/textViewCadastrado"
+            android:id="@+id/loginTextViewRegistered"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ainda_nao_e_cadastrado"
@@ -148,7 +148,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textViewInscrevase"
+            android:id="@+id/loginTextViewRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -157,7 +157,7 @@
             android:letterSpacing="0.01"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textViewCadastrado"
+            app:layout_constraintStart_toEndOf="@+id/loginTextViewRegistered"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

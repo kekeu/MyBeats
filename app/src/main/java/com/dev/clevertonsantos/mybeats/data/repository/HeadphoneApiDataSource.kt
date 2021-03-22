@@ -3,7 +3,7 @@ package com.dev.clevertonsantos.mybeats.data.repository
 import com.dev.clevertonsantos.mybeats.data.ApiService
 import com.dev.clevertonsantos.mybeats.data.HeadphoneResult
 import com.dev.clevertonsantos.mybeats.data.response.HeadphoneResponse
-import com.dev.clevertonsantos.mybeats.data.response.UserResponse
+import com.dev.clevertonsantos.mybeats.data.request.UserRequest
 import com.dev.clevertonsantos.mybeats.data.response.convertToListHeadphone
 import retrofit2.Call
 import retrofit2.Callback
@@ -11,7 +11,7 @@ import retrofit2.Response
 
 class HeadphoneApiDataSource : HeadphoneRepository {
 
-    override fun getHeadphones(headphoneResultCallback: (result: HeadphoneResult) -> Unit) {
+    override fun getHeadphones(resultCallback: (result: HeadphoneResult) -> Unit) {
         ApiService.service.listHeadphones().enqueue(object: Callback<List<HeadphoneResponse>> {
             override fun onResponse(
                 call: Call<List<HeadphoneResponse>>,
@@ -19,24 +19,24 @@ class HeadphoneApiDataSource : HeadphoneRepository {
             ) {
                 if (response.isSuccessful) {
                     val headphones = response.body()?.convertToListHeadphone()
-                    headphoneResultCallback(HeadphoneResult.Success(headphones))
+                    resultCallback(HeadphoneResult.Success(headphones))
                 } else {
-                    headphoneResultCallback(HeadphoneResult.ApiError(response.message()))
+                    resultCallback(HeadphoneResult.ApiError(response.message()))
                 }
             }
 
             override fun onFailure(call: Call<List<HeadphoneResponse>>, t: Throwable) {
-                headphoneResultCallback(HeadphoneResult.ServerError)
+                resultCallback(HeadphoneResult.ServerError)
             }
         })
     }
 
     override fun login(
         email: String,
-        senha: String,
+        password: String,
         resultCallback: (result: HeadphoneResult) -> Unit
     ) {
-        ApiService.service.login(UserResponse(email, senha)).enqueue(object: Callback<Void>{
+        ApiService.service.login(UserRequest(email, password)).enqueue(object: Callback<Void>{
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 if (response.isSuccessful) {
                     resultCallback(HeadphoneResult.Success(null))

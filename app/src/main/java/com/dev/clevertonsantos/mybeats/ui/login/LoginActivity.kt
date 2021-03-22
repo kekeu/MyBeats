@@ -11,6 +11,7 @@ import com.dev.clevertonsantos.mybeats.MainActivity
 import com.dev.clevertonsantos.mybeats.R
 import com.dev.clevertonsantos.mybeats.data.repository.HeadphoneApiDataSource
 import com.google.android.material.textfield.TextInputEditText
+import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
 
@@ -29,14 +30,9 @@ class LoginActivity : AppCompatActivity() {
         actionBar?.hide()
         setContentView(R.layout.activity_login)
 
-        val usuario = findViewById<TextInputEditText>(R.id.editTextUsuario)
-        val senha = findViewById<TextInputEditText>(R.id.editTextSenha)
-        val button = findViewById<Button>(R.id.buttonEntrar)
-        val text = findViewById<TextView>(R.id.textViewInscrevase)
-
-        text.setOnClickListener {}
-        button.setOnClickListener {
-            viewModel.login(usuario.text.toString(), senha.text.toString())
+        loginTextViewRegister.setOnClickListener {}
+        loginButtonEnter.setOnClickListener {
+            viewModel.login(loginEditTextUser.text.toString(), loginEditTextPassword.text.toString())
         }
 
         viewModel.loginLiveData.observe(this, {

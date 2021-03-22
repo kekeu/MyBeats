@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.dev.clevertonsantos.mybeats.R
 import com.dev.clevertonsantos.mybeats.data.model.Headphone
 import com.dev.clevertonsantos.mybeats.data.repository.HeadphoneApiDataSource
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
 
@@ -31,19 +32,14 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val flipper = view.findViewById<ViewFlipper>(R.id.viewFlipper)
-        val textViewError = view.findViewById<TextView>(R.id.error)
-        val recyclerBooks = view.findViewById<RecyclerView>(R.id.recyclerHeadphones)
-        val buttonAdicionar = view.findViewById<Button>(R.id.buttonAdicionar)
-
-        with(recyclerBooks) {
+        with(homeRecyclerHeadphones) {
             layoutManager = LinearLayoutManager(activity,
                     RecyclerView.VERTICAL,false)
             setHasFixedSize(true)
             adapter = homeAdapter
         }
 
-        buttonAdicionar.setOnClickListener {
+        homeButtonAdd.setOnClickListener {
             viewModel.getHeadphones()
         }
         viewModel.headphonesLiveData.observe(viewLifecycleOwner, {
@@ -53,9 +49,9 @@ class HomeFragment : Fragment() {
         })
         viewModel.viewFlipperLiveData.observe(viewLifecycleOwner, {
             it?.let { viewFlipper ->
-                flipper.displayedChild = viewFlipper.first
+                homeViewFlipper.displayedChild = viewFlipper.first
                 viewFlipper.second?.let { errorMessage ->
-                    textViewError.text = errorMessage
+                    homeTextViewError.text = errorMessage
                 }
             }
         })
