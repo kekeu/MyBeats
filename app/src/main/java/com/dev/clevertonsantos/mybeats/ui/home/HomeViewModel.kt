@@ -32,13 +32,4 @@ class HomeViewModel(val dataSource: HeadphoneRepository) : ViewModel() {
         private const val VIEW_FLIPPER_HEADPHONES = 1
         private const val VIEW_FLIPPER_ERROR = 2
     }
-
-    class ViewModelFactory(val dataSource: HeadphoneRepository) : ViewModelProvider.Factory {
-        override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-            if (modelClass.isAssignableFrom(HomeViewModel::class.java)) {
-                return HomeViewModel(dataSource) as T
-            }
-            throw IllegalArgumentException("Unknown ViewModel class")
-        }
-    }
 }
