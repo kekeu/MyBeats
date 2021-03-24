@@ -1,7 +1,7 @@
 package com.dev.clevertonsantos.mybeats.data.repository
 
-import com.dev.clevertonsantos.mybeats.data.ApiService
 import com.dev.clevertonsantos.mybeats.data.HeadphoneResult
+import com.dev.clevertonsantos.mybeats.data.HeadphoneService
 import com.dev.clevertonsantos.mybeats.data.response.HeadphoneResponse
 import com.dev.clevertonsantos.mybeats.data.request.UserRequest
 import com.dev.clevertonsantos.mybeats.data.response.convertToListHeadphone
@@ -9,10 +9,10 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class HeadphoneApiDataSource : HeadphoneRepository {
+class HeadphoneApiDataSource(private val headphoneService: HeadphoneService) : HeadphoneRepository {
 
     override fun getHeadphones(resultCallback: (result: HeadphoneResult) -> Unit) {
-        ApiService.service.listHeadphones().enqueue(object: Callback<List<HeadphoneResponse>> {
+        headphoneService.listHeadphones().enqueue(object: Callback<List<HeadphoneResponse>> {
             override fun onResponse(
                 call: Call<List<HeadphoneResponse>>,
                 response: Response<List<HeadphoneResponse>>
@@ -36,7 +36,7 @@ class HeadphoneApiDataSource : HeadphoneRepository {
         password: String,
         resultCallback: (result: HeadphoneResult) -> Unit
     ) {
-        ApiService.service.login(UserRequest(email, password)).enqueue(object: Callback<Void>{
+        headphoneService.login(UserRequest(email, password)).enqueue(object: Callback<Void>{
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 if (response.isSuccessful) {
                     resultCallback(HeadphoneResult.Success(null))
