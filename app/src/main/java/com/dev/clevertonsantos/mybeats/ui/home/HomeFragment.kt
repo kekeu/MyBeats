@@ -4,22 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
-import android.widget.ViewFlipper
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dev.clevertonsantos.mybeats.R
 import com.dev.clevertonsantos.mybeats.data.model.Headphone
-import com.dev.clevertonsantos.mybeats.data.repository.HeadphoneApiDataSource
 import kotlinx.android.synthetic.main.fragment_home.*
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment() {
 
-    private val viewModel: HomeViewModel = HomeViewModel.ViewModelFactory(HeadphoneApiDataSource())
-        .create(HomeViewModel::class.java)
+    private val viewModel: HomeViewModel by viewModel()
     private val homeAdapter = HomeAdapter(::onItemClicked)
 
     override fun onCreateView(
