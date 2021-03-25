@@ -1,8 +1,8 @@
 package com.dev.clevertonsantos.mybeats.data
 
-import com.dev.clevertonsantos.mybeats.data.response.HeadphoneResponse
 import com.dev.clevertonsantos.mybeats.data.request.UserRequest
-import retrofit2.Call
+import com.dev.clevertonsantos.mybeats.data.response.HeadphoneResponse
+import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
@@ -10,8 +10,8 @@ import retrofit2.http.POST
 interface HeadphoneService {
 
     @GET("beats")
-    fun listHeadphones(): Call<List<HeadphoneResponse>>
+    suspend fun listHeadphones(): Response<List<HeadphoneResponse>>
 
     @POST("login")
-    fun login(@Body user: UserRequest): Call<Void>
+    suspend fun login(@Body user: UserRequest): Response<Void>
 }

@@ -2,27 +2,27 @@ package com.dev.clevertonsantos.mybeats.ui.home
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
-import com.dev.clevertonsantos.mybeats.data.HeadphoneResult
+import androidx.lifecycle.viewModelScope
 import com.dev.clevertonsantos.mybeats.data.model.Headphone
 import com.dev.clevertonsantos.mybeats.data.repository.HeadphoneRepository
+import com.dev.clevertonsantos.mybeats.data.response.convertToListHeadphone
+import kotlinx.coroutines.launch
 
-class HomeViewModel(val dataSource: HeadphoneRepository) : ViewModel() {
+class HomeViewModel(private val dataSource: HeadphoneRepository) : ViewModel() {
 
     val headphonesLiveData: MutableLiveData<List<Headphone>> = MutableLiveData()
     val viewFlipperLiveData: MutableLiveData<Pair<Int, String?>> = MutableLiveData()
 
     fun getHeadphones() {
         viewFlipperLiveData.value = Pair(VIEW_FLIPPER_LOADING, null)
-        dataSource.getHeadphones {
-            when (it) {
-                is HeadphoneResult.Success -> {
-                    headphonesLiveData.value = it.headphones
-                    viewFlipperLiveData.value = Pair(VIEW_FLIPPER_HEADPHONES, null)
-                }
-                is HeadphoneResult.ApiError -> viewFlipperLiveData.value = Pair(
-                    VIEW_FLIPPER_ERROR, it.messageError)
-                else -> viewFlipperLiveData.value = Pair(VIEW_FLIPPER_ERROR, "Server Error")
+
+        viewModelScope.launch {
+            val response = dataSource.getHeadphones()
+            if (response.isSuccessful) {
+                headphonesLiveData.value = response.body()?.convertToListHeadphone()
+                viewFlipperLiveData.value = Pair(VIEW_FLIPPER_HEADPHONES, null)
+            } else {
+                viewFlipperLiveData.value = Pair(VIEW_FLIPPER_ERROR, response.message())
             }
         }
     }

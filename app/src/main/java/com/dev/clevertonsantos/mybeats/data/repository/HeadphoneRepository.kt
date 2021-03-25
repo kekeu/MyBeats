@@ -1,10 +1,12 @@
 package com.dev.clevertonsantos.mybeats.data.repository
 
 import com.dev.clevertonsantos.mybeats.data.HeadphoneResult
+import com.dev.clevertonsantos.mybeats.data.response.HeadphoneResponse
+import retrofit2.Response
 
 interface HeadphoneRepository {
 
-    fun getHeadphones(resultCallback: (result: HeadphoneResult) -> Unit)
-    fun login(email: String, password: String, resultCallback: (result: HeadphoneResult) -> Unit)
+    suspend fun getHeadphones() : Response<List<HeadphoneResponse>>
+    suspend fun login(email: String, password: String) : Response<Void>
 
 }
