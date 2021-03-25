@@ -14,7 +14,7 @@ import org.koin.core.module.Module
 import kotlin.jvm.Throws
 
 class KoinTestRule(private val modules: List<Module> = emptyList(),
-                   private val isStarted:Boolean = true) : TestRule {
+                   private val isStarted:Boolean = false) : TestRule {
     override fun apply(base: Statement, description: Description): Statement {
         return object : Statement() {
             @Throws(Throwable::class)

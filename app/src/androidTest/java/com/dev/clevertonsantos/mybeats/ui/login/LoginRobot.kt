@@ -9,7 +9,6 @@ import com.dev.clevertonsantos.mybeats.ui.home.HomeViewModel
 import io.mockk.every
 import io.mockk.mockk
 import kotlinx.coroutines.runBlocking
-import okhttp3.MediaType
 import okhttp3.ResponseBody
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.component.KoinComponent

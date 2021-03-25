@@ -1,6 +1,5 @@
 package com.dev.clevertonsantos.mybeats.data.repository
 
-import com.dev.clevertonsantos.mybeats.data.HeadphoneResult
 import com.dev.clevertonsantos.mybeats.data.response.HeadphoneResponse
 import retrofit2.Response
 
