@@ -1,4 +1,4 @@
-package com.dev.clevertonsantos.mybeats.ui.login
+package com.dev.clevertonsantos.mybeats
 
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.ViewInteraction

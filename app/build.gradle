@@ -17,7 +17,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "com.dev.clevertonsantos.mybeats.ui.login.CustomRunner"
+        testInstrumentationRunner "com.dev.clevertonsantos.mybeats.CustomRunner"
     }
 
     buildTypes {

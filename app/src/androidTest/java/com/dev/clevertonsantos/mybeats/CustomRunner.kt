@@ -1,9 +1,8 @@
-package com.dev.clevertonsantos.mybeats.ui.login
+package com.dev.clevertonsantos.mybeats
 
 import android.app.Application
 import android.content.Context
 import androidx.test.runner.AndroidJUnitRunner
-import com.dev.clevertonsantos.mybeats.MyBeatsApp
 
 class CustomRunner : AndroidJUnitRunner() {
     override fun newApplication(

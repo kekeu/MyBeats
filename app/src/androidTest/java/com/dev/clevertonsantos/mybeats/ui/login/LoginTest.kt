@@ -2,6 +2,7 @@ package com.dev.clevertonsantos.mybeats.ui.login
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
+import com.dev.clevertonsantos.mybeats.KoinTestRule
 import com.dev.clevertonsantos.mybeats.R
 import com.dev.clevertonsantos.mybeats.di.apiDataSourceModule
 import com.dev.clevertonsantos.mybeats.di.homeModule

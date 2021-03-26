@@ -3,6 +3,7 @@ package com.dev.clevertonsantos.mybeats.ui.login
 import android.content.Intent
 import androidx.test.core.app.ActivityScenario
 import androidx.test.platform.app.InstrumentationRegistry
+import com.dev.clevertonsantos.mybeats.BaseTestRobot
 import com.dev.clevertonsantos.mybeats.R
 import com.dev.clevertonsantos.mybeats.data.repository.HeadphoneApiDataSource
 import com.dev.clevertonsantos.mybeats.ui.home.HomeViewModel
