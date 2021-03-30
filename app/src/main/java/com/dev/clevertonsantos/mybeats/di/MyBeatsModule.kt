@@ -4,7 +4,6 @@ import com.dev.clevertonsantos.mybeats.data.HeadphoneService
 import com.dev.clevertonsantos.mybeats.data.repository.HeadphoneApiDataSource
 import com.dev.clevertonsantos.mybeats.ui.home.HomeViewModel
 import com.dev.clevertonsantos.mybeats.ui.login.LoginViewModel
-import okhttp3.OkHttpClient
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 import retrofit2.Retrofit

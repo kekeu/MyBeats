@@ -26,4 +26,5 @@
     <string name="login_edit_text_error_invalid_email">E-mail inválido</string>
     <string name="login_edit_text_error_invalid_password">Senha inválida</string>
     <string name="user_password_invalid">Usuário e/ou senha inválidos</string>
+    <string name="error">Error</string>
 </resources>

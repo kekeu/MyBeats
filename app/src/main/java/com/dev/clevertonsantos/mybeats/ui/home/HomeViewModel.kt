@@ -17,12 +17,16 @@ class HomeViewModel(private val dataSource: HeadphoneRepository) : ViewModel() {
         viewFlipperLiveData.value = Pair(VIEW_FLIPPER_LOADING, null)
 
         viewModelScope.launch {
-            val response = dataSource.getHeadphones()
-            if (response.isSuccessful) {
-                headphonesLiveData.value = response.body()?.convertToListHeadphone()
-                viewFlipperLiveData.value = Pair(VIEW_FLIPPER_HEADPHONES, null)
-            } else {
-                viewFlipperLiveData.value = Pair(VIEW_FLIPPER_ERROR, response.message())
+            try {
+                val response = dataSource.getHeadphones()
+                if (response.isSuccessful) {
+                    headphonesLiveData.value = response.body()?.convertToListHeadphone()
+                    viewFlipperLiveData.value = Pair(VIEW_FLIPPER_HEADPHONES, null)
+                } else {
+                    viewFlipperLiveData.value = Pair(VIEW_FLIPPER_ERROR, response.message())
+                }
+            } catch (t: Throwable) {
+                viewFlipperLiveData.value = Pair(VIEW_FLIPPER_ERROR, "Error")
             }
         }
     }

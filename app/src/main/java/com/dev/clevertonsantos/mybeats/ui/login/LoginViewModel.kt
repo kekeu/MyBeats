@@ -15,11 +15,15 @@ class LoginViewModel(private val dataSource: HeadphoneRepository) : ViewModel() 
     fun login(email: String, password: String) {
         if (isValidForm(email, password)) {
             viewModelScope.launch {
-                val response = dataSource.login(email, password)
-                if (response.isSuccessful) {
-                    loginLiveData.value = Pair(true, R.string.app_name)
-                } else {
-                    loginLiveData.value = Pair(false, R.string.user_password_invalid)
+                try {
+                    val response = dataSource.login(email, password)
+                    if (response.isSuccessful) {
+                        loginLiveData.value = Pair(true, R.string.app_name)
+                    } else {
+                        loginLiveData.value = Pair(false, R.string.user_password_invalid)
+                    }
+                } catch (t: Throwable) {
+                    loginLiveData.value = Pair(false, R.string.error)
                 }
             }
         } else {
